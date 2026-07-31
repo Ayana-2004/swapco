@@ -1,26 +1,86 @@
 @import "tailwindcss";
 
+@theme inline {
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
+
+  --color-ink: #14121f;
+  --color-violet-deep: #3d2fe0;
+  --color-violet: #5b4bf0;
+  --color-violet-soft: #8f85f5;
+  --color-periwinkle: #c9c5fb;
+  --color-mint: #17c98e;
+  --color-chip-blue: #dceeff;
+  --color-chip-blue-ink: #2f6fe4;
+  --color-chip-purple: #ece5ff;
+  --color-chip-purple-ink: #7a5cf0;
+  --color-chip-green: #e2f9ee;
+  --color-chip-green-ink: #189a6d;
+  --color-chip-orange: #ffe9d6;
+  --color-chip-orange-ink: #d3752c;
+  --color-chip-pink: #f6e3fb;
+  --color-chip-pink-ink: #a855c9;
+
+  /* Faircode brand tokens (Faircode_Brand_Guidelines.pdf v1.0 · 2026) —
+     scoped to the Faircode initiative section and footer credit only. */
+  --font-geist: var(--font-geist);
+  --color-fc-blue: #009dfd;
+  --color-fc-green: #25f7a2;
+  --color-fc-ink: #141922;
+  --color-fc-canvas: #f7f9fb;
+}
+
 :root {
   --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--color-ink);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-geist {
+  font-family: var(--font-geist);
+}
+
+/* Faircode's signature "Current" — always ~100deg, green to blue, spent once per surface. */
+.fc-current-bg {
+  background-image: linear-gradient(100deg, #25f7a2 0%, #009dfd 100%);
+}
+
+.fc-current-text {
+  background-image: linear-gradient(100deg, #25f7a2 0%, #009dfd 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hero-gradient {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.14) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.14) 1px, transparent 1px),
+    linear-gradient(160deg, #4632ee 0%, #5b4bf0 32%, #8f85f5 60%, #dcd9fb 82%, #ffffff 100%);
+  background-size: 42px 42px, 42px 42px, 100% 100%;
+}
+
+.panel-gradient {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.14) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.14) 1px, transparent 1px),
+    linear-gradient(135deg, #4632ee 0%, #7466f3 55%, #a99ef8 100%);
+  background-size: 42px 42px, 42px 42px, 100% 100%;
+}
+
+.device-frame {
+  border-radius: 2.75rem;
+  border: 6px solid #14121f;
+  box-shadow:
+    0 30px 60px -20px rgba(20, 18, 31, 0.45),
+    0 10px 20px -8px rgba(20, 18, 31, 0.25);
+  overflow: hidden;
+  background: #14121f;
 }
