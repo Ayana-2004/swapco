@@ -23,7 +23,7 @@ export default function Logo({ variant = "dark", className = "" }: LogoProps) {
 
   return (
     <span
-      className={`inline-flex items-center rounded-full bg-fc-ink px-4 py-2 ${className}`}
+      className={`inline-flex items-center rounded-full bg-sky-500 px-4 py-2 ${className}`}
     >
       {logo}
     </span>
