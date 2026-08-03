@@ -3,7 +3,7 @@ import DeviceFrame from "./DeviceFrame";
 const SCREENS = [
   { src: "/screens/login.png", alt: "Swapco login screen", label: "Secure login" },
   { src: "/screens/profile-info.png", alt: "Swapco profile information screen", label: "Profile setup" },
-  { src: "/screens/onboarding-filter.png", alt: "Swapco advanced job filter onboarding screen", label: "Job filters" },
+  { src: "/screens/discover-2.png", alt: "Swapco advanced job filter onboarding screen", label: "Job filters" },
   { src: "/screens/profile.png", alt: "Swapco profile screen", label: "Your profile" },
   { src: "/screens/discover-1.png", alt: "Swapco discovery screen", label: "Discover" },
 ];

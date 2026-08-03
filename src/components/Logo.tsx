@@ -1,23 +1,31 @@
+import Image from "next/image";
+
 type LogoProps = {
   variant?: "light" | "dark";
   className?: string;
 };
 
 export default function Logo({ variant = "dark", className = "" }: LogoProps) {
-  const color = variant === "light" ? "text-white" : "text-violet-deep";
+  const logo = (
+    <Image
+      src="/swapco-logo.png"
+      alt="Swapco"
+      width={583}
+      height={106}
+      priority
+      className="h-6 w-auto sm:h-7"
+    />
+  );
+
+  if (variant === "light") {
+    return <span className={`inline-flex ${className}`}>{logo}</span>;
+  }
 
   return (
     <span
-      className={`font-display inline-flex items-baseline gap-[2px] text-2xl font-bold italic tracking-tight ${color} ${className}`}
+      className={`inline-flex items-center rounded-full bg-fc-ink px-4 py-2 ${className}`}
     >
-      swap
-      <span className="relative inline-flex items-baseline">
-        c
-        <span className="relative inline-block h-[0.62em] w-[0.9em] translate-y-[0.06em]">
-          <span className="absolute left-0 top-0 h-[0.62em] w-[0.5em] rounded-full border-[0.14em] border-current" />
-          <span className="absolute right-0 top-0 h-[0.62em] w-[0.5em] rounded-full border-[0.14em] border-current" />
-        </span>
-      </span>
+      {logo}
     </span>
   );
 }
