@@ -4,8 +4,8 @@ const FAIRCODE_URL = "https://www.faircodetech.com";
 
 export default function FaircodeInitiative() {
   return (
-    <section className="bg-fc-ink px-6 py-20 sm:px-10">
-      <div className="mx-auto max-w-4xl text-center">
+    <section className="bg-fc-ink px-6 py-28 sm:px-10 sm:py-36">
+      <div className="mx-auto max-w-5xl text-center">
         <p className="font-body text-xs font-bold uppercase tracking-[0.14em] text-fc-green">
           A Faircode Initiative
         </p>
