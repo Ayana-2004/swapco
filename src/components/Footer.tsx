@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Logo from "./Logo";
 
 const FAIRCODE_URL = "https://www.faircodetech.com";
@@ -10,9 +11,9 @@ export default function Footer() {
         <Logo variant="stacked" />
         <p className="text-sm text-navy/55">&copy; {new Date().getFullYear()} SwapaPost. All rights reserved.</p>
         <div className="flex gap-6 text-sm font-medium text-navy/65">
-          <a href="#" className="hover:text-navy">Privacy</a>
-          <a href="#" className="hover:text-navy">Terms</a>
-          <a href="#" className="hover:text-navy">Contact</a>
+          <Link href="/privacy" className="hover:text-navy">Privacy</Link>
+          <Link href="/terms" className="hover:text-navy">Terms</Link>
+          <Link href="/contact" className="hover:text-navy">Contact</Link>
         </div>
       </div>
 
