@@ -6,7 +6,7 @@ export default function FaircodeInitiative() {
   return (
     <section className="bg-fc-ink px-6 py-28 sm:px-10 sm:py-36">
       <div className="mx-auto max-w-5xl text-center">
-        <p className="font-body text-xs font-bold uppercase tracking-[0.14em] text-fc-green">
+        <p className="font-sans text-xs font-bold uppercase tracking-[0.14em] text-fc-green">
           A Faircode Initiative
         </p>
         <div className="fc-current-bg mx-auto mt-4 h-[3px] w-14 rounded-full" />
@@ -15,7 +15,7 @@ export default function FaircodeInitiative() {
           Serious software, that feels light.
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-white/65">
-          Swapco is built and maintained by Faircode, the studio behind
+          SwapaPost is built and maintained by Faircode, the studio behind
           enterprise software for growing teams. Same discipline, clarity,
           trust, and craft, aimed at a different problem: getting people
           back to the posting they actually want.

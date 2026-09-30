@@ -1,42 +1,29 @@
 import Image from "next/image";
 
 type LogoProps = {
-  variant?: "light" | "dark";
+  variant?: "horizontal" | "stacked";
   className?: string;
 };
 
-export default function Logo({ variant = "dark", className = "" }: LogoProps) {
-  if (variant === "light") {
+// Brandbook rule: the logo sits on solid white only, is never recoloured,
+// and keeps clear space equal to the pin height on all sides.
+export default function Logo({ variant = "horizontal", className = "" }: LogoProps) {
+  if (variant === "stacked") {
     return (
-      <span className={`inline-flex ${className}`}>
-        <Image
-          src="/swapco-logo.png"
-          alt="Swapco"
-          width={583}
-          height={106}
-          priority
-          className="h-6 w-auto sm:h-7"
-        />
-      </span>
+      <Image
+        src="/swapapost-logo.png"
+        alt="SwapaPost"
+        width={1002}
+        height={705}
+        className={`h-20 w-auto ${className}`}
+      />
     );
   }
 
   return (
-    <span
-      role="img"
-      aria-label="Swapco"
-      className={`inline-block h-6 bg-violet sm:h-7 ${className}`}
-      style={{
-        aspectRatio: "583 / 106",
-        WebkitMaskImage: "url(/swapco-logo.png)",
-        maskImage: "url(/swapco-logo.png)",
-        WebkitMaskRepeat: "no-repeat",
-        maskRepeat: "no-repeat",
-        WebkitMaskSize: "contain",
-        maskSize: "contain",
-        WebkitMaskPosition: "left center",
-        maskPosition: "left center",
-      }}
-    />
+    <span role="img" aria-label="SwapaPost" className={`inline-flex items-center gap-2.5 ${className}`}>
+      <Image src="/swapapost-emblem.png" alt="" width={1002} height={505} priority className="h-8 w-auto shrink-0" />
+      <Image src="/swapapost-wordmark.png" alt="" width={936} height={126} priority className="h-[17px] w-auto shrink-0" />
+    </span>
   );
 }

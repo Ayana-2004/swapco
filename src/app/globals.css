@@ -1,27 +1,18 @@
 @import "tailwindcss";
 
 @theme inline {
+  /* SwapaPost typography (SwapaPost_Official_Brandbook.pdf, section 03):
+     headings Helvetica Neue / Inter, body Inter. */
   --font-sans: var(--font-body);
-  --font-display: var(--font-display);
+  --font-display: "Helvetica Neue", Helvetica, var(--font-body), Arial, sans-serif;
 
-  --color-ink: #14121f;
-  --color-violet-deep: #3d2fe0;
-  --color-violet: #5b4bf0;
-  --color-violet-soft: #8f85f5;
-  --color-periwinkle: #c9c5fb;
-  --color-mint: #17c98e;
-  --color-chip-blue: #dceeff;
-  --color-chip-blue-ink: #2f6fe4;
-  --color-chip-purple: #ece5ff;
-  --color-chip-purple-ink: #7a5cf0;
-  --color-chip-green: #e2f9ee;
-  --color-chip-green-ink: #189a6d;
-  --color-chip-orange: #ffe9d6;
-  --color-chip-orange-ink: #d3752c;
-  --color-chip-pink: #f6e3fb;
-  --color-chip-pink-ink: #a855c9;
+  /* SwapaPost core palette (SwapaPost_Official_Brandbook.pdf, section 02). */
+  --color-navy: #0d2a4a;
+  --color-swap: #00aeef;
+  --color-slate-light: #f8fafc;
+  --color-swap-tint: #e6f7fd;
 
-  /* Faircode brand tokens (Faircode_Brand_Guidelines.pdf v1.0 · 2026) —
+  /* Faircode brand tokens (Faircode_Brand_Guidelines.pdf v1.0 · 2026) -
      scoped to the Faircode initiative section and footer credit only. */
   --font-geist: var(--font-geist);
   --color-fc-blue: #009dfd;
@@ -36,7 +27,11 @@
 
 body {
   background: var(--background);
-  color: var(--color-ink);
+  color: var(--color-navy);
+}
+
+section[id] {
+  scroll-margin-top: 72px;
 }
 
 .font-display {
@@ -47,7 +42,7 @@ body {
   font-family: var(--font-geist);
 }
 
-/* Faircode's signature "Current" — always ~100deg, green to blue, spent once per surface. */
+/* Faircode's signature "Current" - always ~100deg, green to blue, spent once per surface. */
 .fc-current-bg {
   background-image: linear-gradient(100deg, #25f7a2 0%, #009dfd 100%);
 }
@@ -59,28 +54,27 @@ body {
   color: transparent;
 }
 
-.hero-gradient {
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.14) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.14) 1px, transparent 1px),
-    linear-gradient(160deg, #4632ee 0%, #5b4bf0 32%, #8f85f5 60%, #dcd9fb 82%, #ffffff 100%);
-  background-size: 42px 42px, 42px 42px, 100% 100%;
+/* Subtle dot grid on Slate Light, used behind the hero. */
+.hero-grid {
+  background-color: #f8fafc;
+  background-image: radial-gradient(rgba(13, 42, 74, 0.09) 1px, transparent 1px);
+  background-size: 22px 22px;
 }
 
-.panel-gradient {
+.navy-grid {
+  background-color: #0d2a4a;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.14) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.14) 1px, transparent 1px),
-    linear-gradient(135deg, #4632ee 0%, #7466f3 55%, #a99ef8 100%);
-  background-size: 42px 42px, 42px 42px, 100% 100%;
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 44px 44px;
 }
 
 .device-frame {
-  border-radius: 2.75rem;
-  border: 6px solid #14121f;
+  border-radius: 2.5rem;
+  border: 7px solid #0d2a4a;
   box-shadow:
-    0 30px 60px -20px rgba(20, 18, 31, 0.45),
-    0 10px 20px -8px rgba(20, 18, 31, 0.25);
+    0 30px 60px -24px rgba(13, 42, 74, 0.45),
+    0 12px 24px -12px rgba(13, 42, 74, 0.25);
   overflow: hidden;
-  background: #14121f;
+  background: #ffffff;
 }
