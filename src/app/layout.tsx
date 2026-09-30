@@ -19,7 +19,7 @@ const geist = Geist({
 export const metadata: Metadata = {
   title: "SwapaPost - Your Location, Your Choice",
   description:
-    "SwapaPost matches verified professionals in the same role for mutual posting swaps, so you can work closer to home. Confirmed over real voice & video calls, no texts.",
+    "SwapaPost matches verified professionals in the same role for mutual posting swaps, so you can work closer to home.",
 };
 
 export default function RootLayout({

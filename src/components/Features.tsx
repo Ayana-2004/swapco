@@ -1,11 +1,10 @@
 import Image from "next/image";
-import { CheckIcon, PhoneIcon, SwapIcon, VideoIcon } from "./Icons";
+import { CheckIcon, SwapIcon } from "./Icons";
 
 const CHIPS = [
   { label: "Location", tone: "bg-navy text-white" },
   { label: "Job title", tone: "bg-swap text-navy" },
   { label: "Company", tone: "bg-white text-navy ring-1 ring-navy/15" },
-  { label: "Gender", tone: "bg-white text-navy ring-1 ring-navy/15" },
 ];
 
 export default function Features() {
@@ -21,13 +20,13 @@ export default function Features() {
         </h2>
         <p className="mt-4 text-lg text-navy/65">
           SwapaPost finds the one person whose posting mirrors yours, same
-          job, same company, opposite location, then gets you on a call to
-          make it real.
+          job, same company, opposite location, then lets you send a swap
+          request to make it real.
         </p>
       </div>
 
       <div className="mt-14 grid gap-6 md:grid-cols-3">
-        <div className="rounded-3xl bg-slate-light p-8 ring-1 ring-navy/[0.06] md:col-span-2">
+        <div className="rounded-3xl bg-slate-light p-8 ring-1 ring-navy/[0.06] md:col-span-3">
           <h3 className="font-display text-xl font-bold text-navy">Advanced Job Filter</h3>
           <p className="mt-2 max-w-lg text-navy/65">
             Match with people in your exact job title and company whose
@@ -40,23 +39,6 @@ export default function Features() {
                 {chip.label}
               </span>
             ))}
-          </div>
-        </div>
-
-        <div className="navy-grid rounded-3xl p-8 text-white">
-          <h3 className="font-display text-xl font-bold">Voice &amp; Video First</h3>
-          <p className="mt-2 text-white/70">
-            No texts. Talk through the swap on a real-time call, so the
-            details are confirmed directly, not lost in a chat thread.
-          </p>
-          <div className="mt-8 flex items-center gap-3">
-            <span className="flex h-12 w-12 items-center justify-center rounded-full bg-swap text-navy">
-              <VideoIcon className="h-5 w-5" />
-            </span>
-            <span className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-navy">
-              <PhoneIcon className="h-5 w-5" />
-            </span>
-            <p className="text-sm font-semibold text-swap">Calls only. Always.</p>
           </div>
         </div>
 

@@ -25,8 +25,7 @@ export default function Hero() {
 
           <p className="mt-7 text-lg leading-relaxed text-navy/70">
             Find someone in your exact role whose posting is the mirror of
-            yours, then confirm the swap over a real voice or video call. No
-            texts.
+            yours, then send a swap request and connect once they accept.
           </p>
 
           <div className="mt-9 flex flex-wrap items-center gap-4">

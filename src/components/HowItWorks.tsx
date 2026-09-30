@@ -2,7 +2,7 @@ const STEPS = [
   {
     n: "01",
     title: "Sign up & verify",
-    body: "Create your account with email or phone, then confirm it with a one-time OTP.",
+    body: "Create your account, then verify it with a one-time code.",
   },
   {
     n: "02",
@@ -16,8 +16,8 @@ const STEPS = [
   },
   {
     n: "04",
-    title: "Find your match & call",
-    body: "Filter by location, job title and company to find your mirror-match, then confirm the swap on a voice or video call.",
+    title: "Find your match & request",
+    body: "Filter by location, job title and company to find your mirror-match, then send them a swap request.",
   },
 ];
 
@@ -31,7 +31,7 @@ export default function HowItWorks() {
             How it works
           </p>
           <h2 className="font-display mt-4 text-3xl font-bold sm:text-4xl">
-            From sign up to your first swap call, in four steps.
+            From sign up to your first swap request, in four steps.
           </h2>
         </div>
 

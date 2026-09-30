@@ -5,15 +5,11 @@ const FAQS = [
   },
   {
     q: "Does SwapaPost handle the actual transfer for me?",
-    a: "No. SwapaPost finds your match and lets you confirm the details on a call. The formal transfer request still goes through your company's own HR process, on both sides.",
+    a: "No. SwapaPost finds your match and connects you once they accept your swap request. The formal transfer request still goes through your company's own HR process, on both sides.",
   },
   {
     q: "Why do I need to verify my office ID?",
     a: "Office ID verification confirms your real job and posting, so every match you see is from someone who's actually eligible to swap, not a fake or outdated profile.",
-  },
-  {
-    q: "Can I message someone before calling?",
-    a: "No. SwapaPost is call-first by design. Once you match, you talk through the swap over real-time voice or video, not endless back-and-forth texting.",
   },
 ];
 
