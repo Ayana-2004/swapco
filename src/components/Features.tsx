@@ -19,9 +19,9 @@ export default function Features() {
           Built to match real swaps, not endless scrolling.
         </h2>
         <p className="mt-4 text-lg text-navy/65">
-          SwapaPost finds the one person whose posting mirrors yours, same
-          job, same company, opposite location, then lets you send a swap
-          request to make it real.
+          SwapaPost finds the colleague at another branch who wants your
+          city while you want theirs, then lets you send a swap request to
+          make it happen.
         </p>
       </div>
 
@@ -29,9 +29,8 @@ export default function Features() {
         <div className="rounded-3xl bg-slate-light p-8 ring-1 ring-navy/[0.06] md:col-span-3">
           <h3 className="font-display text-xl font-bold text-navy">Advanced Job Filter</h3>
           <p className="mt-2 max-w-lg text-navy/65">
-            Match with people in your exact job title and company whose
-            current posting is where you want to be, and whose target
-            location is where you already are.
+            Search by location, company, job title and specialization to
+            find colleagues at the branch you want to move to.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             {CHIPS.map((chip) => (
@@ -61,18 +60,18 @@ export default function Features() {
             </div>
           </div>
           <p className="mt-2 text-navy/65">
-            Every profile confirms a real job and posting, so a swap request
-            means the other person is actually eligible to transfer.
+            Every profile confirms a real job, company and branch, so a swap
+            request means the other person can actually swap.
           </p>
         </div>
 
         <div className="rounded-3xl bg-slate-light p-8 ring-1 ring-navy/[0.06] md:col-span-2">
           <div className="flex flex-col gap-8 sm:flex-row sm:items-center">
             <div className="flex-1">
-              <h3 className="font-display text-xl font-bold text-navy">Mirror-Match Discovery</h3>
+              <h3 className="font-display text-xl font-bold text-navy">Two-Way Location Matches</h3>
               <p className="mt-2 text-navy/65">
-                See active professionals whose current posting and preferred
-                location are the exact reverse of your own.
+                See colleagues who work in the city you want, and want the
+                city you work in.
               </p>
             </div>
             <div className="flex flex-1 items-center gap-3 rounded-2xl bg-white p-5 ring-1 ring-navy/10">

@@ -24,8 +24,9 @@ export default function Hero() {
           </h1>
 
           <p className="mt-7 text-lg leading-relaxed text-navy/70">
-            Find someone in your exact role whose posting is the mirror of
-            yours, then send a swap request and connect once they accept.
+            Swap your work location with a colleague at another branch who
+            wants your city while you want theirs. Same company, same role,
+            new city.
           </p>
 
           <div className="mt-9 flex flex-wrap items-center gap-4">

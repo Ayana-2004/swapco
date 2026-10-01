@@ -13,8 +13,8 @@ export default function Cta() {
               <span className="text-swap">Not your standards.</span>
             </h2>
             <p className="mt-4 max-w-md text-white/70">
-              Join the early access list and be first to find your
-              mirror-match when SwapaPost launches.
+              Join the early access list and be first to find your swap
+              partner when SwapaPost launches.
             </p>
 
             <div className="mt-9 flex flex-wrap gap-4">

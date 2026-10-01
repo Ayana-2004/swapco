@@ -18,7 +18,7 @@ export default function FaircodeInitiative() {
           SwapaPost is built and maintained by Faircode, the studio behind
           enterprise software for growing teams. Same discipline, clarity,
           trust, and craft, aimed at a different problem: getting people
-          back to the posting they actually want.
+          to the city they actually want to work in.
         </p>
 
         <a

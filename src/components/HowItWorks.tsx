@@ -1,3 +1,5 @@
+import { jsonLdScript } from "@/lib/seo";
+
 const STEPS = [
   {
     n: "01",
@@ -7,23 +9,36 @@ const STEPS = [
   {
     n: "02",
     title: "Build your profile",
-    body: "Add your current posting, company, job title and the location you'd rather be working in.",
+    body: "Add your current location, company, job title and the city you want to work in.",
   },
   {
     n: "03",
     title: "Verify your office ID",
-    body: "Confirm your real job and posting, so your swap request carries real weight.",
+    body: "Confirm your real job and branch, so your swap request carries real weight.",
   },
   {
     n: "04",
     title: "Find your match & request",
-    body: "Filter by location, job title and company to find your mirror-match, then send them a swap request.",
+    body: "Filter by location, company and job title to find a colleague who wants your city, then send them a swap request.",
   },
 ];
+
+const HOW_TO_JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  name: "How to swap your work location with a colleague using SwapaPost",
+  step: STEPS.map((step, i) => ({
+    "@type": "HowToStep",
+    position: i + 1,
+    name: step.title,
+    text: step.body,
+  })),
+};
 
 export default function HowItWorks() {
   return (
     <section id="how-it-works" className="navy-grid py-24 text-white">
+      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdScript(HOW_TO_JSON_LD)} />
       <div className="mx-auto max-w-6xl px-6 sm:px-10">
         <div className="max-w-2xl">
           <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-swap">

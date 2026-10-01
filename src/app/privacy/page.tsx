@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import LegalPage, { Section } from "@/components/LegalPage";
 import { SITE } from "@/lib/site";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Privacy Policy - SwapaPost",
+export const metadata: Metadata = pageMetadata({
+  title: "Privacy Policy",
   description: "How SwapaPost collects, uses, shares and protects your personal information.",
-};
+  path: "/privacy",
+});
 
 export default function PrivacyPage() {
   return (
@@ -46,7 +48,7 @@ export default function PrivacyPage() {
       <Section title="2. How we use your information">
         <ul>
           <li>To create and secure your account, including texting one-time verification codes to your phone.</li>
-          <li>To find and recommend professionals whose posting mirrors yours.</li>
+          <li>To find and recommend colleagues at other branches you could swap work locations with.</li>
           <li>To verify your office ID, using automated checks and manual review.</li>
           <li>To deliver swap requests and notify you when someone responds.</li>
           <li>To prevent fraud, fake profiles and misuse of the service.</li>

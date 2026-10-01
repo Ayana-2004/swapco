@@ -1,0 +1,37 @@
+# SwapaPost
+
+> SwapaPost is a mobile app by Faircode that helps you swap your work location with a colleague at another branch of your company. Same company, same role, new city.
+
+Tagline: "Your Location, Your Choice." Coming soon to iOS and Android.
+
+## What it is for
+
+You work at one branch of your company and want to work in another city. Somewhere else in the same company, a colleague in the same role works in that city and wants to move to yours. SwapaPost finds that colleague, so both of you can swap work locations instead of waiting for a one-way transfer.
+
+You keep your job, your role and your company. Only your work location changes.
+
+## How it works
+
+1. Sign up: create an account, then verify it with a one-time code.
+2. Build your profile: add your current location, company, job title and the city you want to work in.
+3. Verify your office ID: scan your employee ID card so other users know your job, company and branch are real.
+4. Find your match and send a request: filter by location, company, job title and specialization to find a colleague who wants your city, then send them a swap request. Once they accept, you can see each other's contact details.
+
+## Key facts
+
+- Matches are between colleagues in the same company and the same role, working at different branches.
+- A match is two-way: they work in the city you want, and they want the city you work in.
+- SwapaPost does not handle the transfer itself. Both people take the agreed swap to their company's own HR process.
+- Office ID verification exists so that every colleague you see can actually swap, not a fake or outdated profile.
+- Built and maintained by Faircode Infotech Pvt Ltd, Kochi, Kerala, India (https://faircodetech.com).
+
+## Pages
+
+- [Home](https://swapco.vercel.app/): features, how it works, app screens and FAQ
+- [Privacy Policy](https://swapco.vercel.app/privacy): what data SwapaPost collects and who can see it
+- [Terms of Service](https://swapco.vercel.app/terms): rules for using SwapaPost
+- [Contact](https://swapco.vercel.app/contact): support and privacy contacts
+
+## Contact
+
+info@faircodetech.com · +91 97782 53076

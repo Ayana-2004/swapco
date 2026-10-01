@@ -7,10 +7,12 @@ import Faq from "@/components/Faq";
 import Cta from "@/components/Cta";
 import FaircodeInitiative from "@/components/FaircodeInitiative";
 import Footer from "@/components/Footer";
+import { homeJsonLd, jsonLdScript } from "@/lib/seo";
 
 export default function Home() {
   return (
     <div className="flex flex-1 flex-col">
+      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdScript(homeJsonLd)} />
       <Navbar />
       <main className="flex flex-1 flex-col">
         <Hero />

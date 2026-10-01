@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import LegalPage from "@/components/LegalPage";
 import { SITE } from "@/lib/site";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Contact - SwapaPost",
+export const metadata: Metadata = pageMetadata({
+  title: "Contact",
   description: "Get in touch with the SwapaPost team for support, privacy requests or general questions.",
-};
+  path: "/contact",
+});
 
 const CHANNELS = [
   {

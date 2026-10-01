@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Geist } from "next/font/google";
+import { SITE } from "@/lib/site";
 import "./globals.css";
 
 // SwapaPost body and UI font, and the fallback for Helvetica Neue headings.
@@ -17,9 +18,31 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "SwapaPost - Your Location, Your Choice",
-  description:
-    "SwapaPost matches verified professionals in the same role for mutual posting swaps, so you can work closer to home.",
+  metadataBase: new URL(SITE.url),
+  title: {
+    default: SITE.seoTitle,
+    template: `%s - ${SITE.name}`,
+  },
+  description: SITE.description,
+  applicationName: SITE.name,
+  authors: [{ name: SITE.legalEntity, url: SITE.website }],
+  creator: SITE.legalEntity,
+  publisher: SITE.legalEntity,
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    siteName: SITE.name,
+    locale: "en_IN",
+    title: SITE.seoTitle,
+    description: SITE.description,
+    url: "/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE.seoTitle,
+    description: SITE.description,
+  },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({

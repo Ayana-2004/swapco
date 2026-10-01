@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import LegalPage, { Section } from "@/components/LegalPage";
 import { SITE } from "@/lib/site";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Terms of Service - SwapaPost",
+export const metadata: Metadata = pageMetadata({
+  title: "Terms of Service",
   description: "The terms that apply when you use SwapaPost.",
-};
+  path: "/terms",
+});
 
 export default function TermsPage() {
   return (
@@ -23,8 +25,8 @@ export default function TermsPage() {
     >
       <Section title="1. What SwapaPost does">
         <p>
-          {SITE.name} helps professionals find someone in the same role and company whose posting is the
-          reverse of their own, so both can request a mutual transfer.
+          {SITE.name} helps you swap your work location with a colleague in the same company and role who
+          works at another branch, so both of you can request a transfer to each other&rsquo;s city.
         </p>
         <p>
           <strong>{SITE.name} is not a party to any transfer.</strong>{" "}
