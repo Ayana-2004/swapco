@@ -51,7 +51,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${geist.variable} h-full scroll-smooth`}>
+    // data-scroll-behavior tells Next 16 to drop scroll-smooth during route
+    // changes, so a new page opens at the top instead of gliding up to it.
+    <html
+      lang="en"
+      data-scroll-behavior="smooth"
+      className={`${inter.variable} ${geist.variable} h-full scroll-smooth`}
+    >
       <body className="min-h-full flex flex-col bg-white font-sans text-navy antialiased">
         {children}
       </body>

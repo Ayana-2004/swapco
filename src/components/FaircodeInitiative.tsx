@@ -23,8 +23,6 @@ export default function FaircodeInitiative() {
 
         <a
           href={FAIRCODE_URL}
-          target="_blank"
-          rel="noopener noreferrer"
           className="mt-9 inline-flex items-center rounded-full bg-white/5 px-6 py-3 ring-1 ring-white/15 transition-colors hover:bg-white/10"
           aria-label="Visit Faircode at faircodetech.com"
         >

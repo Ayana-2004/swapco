@@ -21,18 +21,17 @@ export default function Footer() {
       </div>
 
       <div className="mx-auto mt-10 flex max-w-6xl items-center justify-center border-t border-navy/10 px-6 pt-6 sm:px-10">
-        <a
-          href={FAIRCODE_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-3 text-sm text-navy/55 transition-colors hover:text-navy"
-          aria-label="Visit Faircode at faircodetech.com"
-        >
+        {/* Only the Faircode badge is the link; "A product of" is plain text. */}
+        <p className="flex items-center gap-3 text-sm text-navy/55">
           <span>A product of</span>
-          <span className="inline-flex items-center rounded-full bg-fc-ink px-4 py-2">
+          <a
+            href={FAIRCODE_URL}
+            className="inline-flex items-center rounded-full bg-fc-ink px-4 py-2 transition-opacity hover:opacity-85"
+            aria-label="Visit Faircode at faircodetech.com"
+          >
             <Image src="/Faircode.webp" alt="Faircode" width={843} height={215} className="h-4 w-auto" />
-          </span>
-        </a>
+          </a>
+        </p>
       </div>
     </footer>
   );

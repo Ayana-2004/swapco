@@ -3,7 +3,7 @@ import DeviceFrame from "./DeviceFrame";
 export default function Cta() {
   return (
     <section id="download" className="mx-auto w-full max-w-6xl px-6 pb-24 sm:px-10">
-      <div className="navy-grid relative overflow-hidden rounded-[2.5rem] px-8 pt-16 sm:px-16 lg:py-16">
+      <div className="navy-grid relative overflow-hidden rounded-[2.5rem] px-8 pb-12 pt-16 sm:px-16 lg:py-16">
         <div className="pointer-events-none absolute -right-24 -top-24 h-80 w-80 rounded-full border-[28px] border-swap/15" />
         <div className="relative grid items-center gap-12 lg:grid-cols-2">
           <div>
@@ -42,7 +42,9 @@ export default function Cta() {
             </div>
           </div>
 
-          <div className="relative mx-auto w-[62%] max-w-[240px] translate-y-6 justify-self-center lg:translate-y-0 lg:justify-self-end">
+          {/* Whole phone on every screen: it used to bleed off the card bottom on
+              mobile, which testers read as a broken image. */}
+          <div className="relative mx-auto w-[62%] max-w-[240px] justify-self-center lg:justify-self-end">
             <DeviceFrame src="/screens/splash.jpg" alt="SwapaPost app splash screen" className="!border-white/90" />
           </div>
         </div>

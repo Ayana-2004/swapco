@@ -26,15 +26,20 @@ export default function Features() {
       </div>
 
       <div className="mt-14 grid gap-6 md:grid-cols-3">
-        <div className="rounded-3xl bg-slate-light p-8 ring-1 ring-navy/[0.06] md:col-span-3">
+        <div className="rounded-3xl bg-slate-light p-6 ring-1 ring-navy/[0.06] sm:p-8 md:col-span-3">
           <h3 className="font-display text-xl font-bold text-navy">Advanced Job Filter</h3>
           <p className="mt-2 max-w-lg text-navy/65">
             Search by location, company, job title and specialization to
             find colleagues at the branch you want to move to.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
+          {/* Smaller chips and card padding on phones keep all three on one
+              row down to 360px wide (every current iPhone and most Androids). */}
+          <div className="mt-6 flex flex-wrap gap-2 sm:mt-8 sm:gap-3">
             {CHIPS.map((chip) => (
-              <span key={chip.label} className={`${chip.tone} rounded-full px-4 py-2 text-sm font-semibold`}>
+              <span
+                key={chip.label}
+                className={`${chip.tone} whitespace-nowrap rounded-full px-3 py-1.5 text-[13px] font-semibold sm:px-4 sm:py-2 sm:text-sm`}
+              >
                 {chip.label}
               </span>
             ))}
@@ -71,7 +76,9 @@ export default function Features() {
           <div className="flex flex-col gap-8 sm:flex-row sm:items-center">
             <div className="flex-1">
               <h3 className="font-display text-xl font-bold text-navy">Two-Way Location Matches</h3>
-              <p className="mt-2 text-navy/65">
+              {/* text-balance as well as the global text-wrap: pretty, because
+                  iOS before 26 only supports balance. */}
+              <p className="mt-2 text-balance text-navy/65">
                 See colleagues who work in the city you want, and want the
                 city you work in.
               </p>

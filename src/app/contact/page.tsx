@@ -62,7 +62,7 @@ export default function ContactPage() {
           <a href={`tel:${SITE.phone.replace(/\s/g, "")}`} className="text-swap hover:text-white">
             {SITE.phone}
           </a>
-          <a href={SITE.website} target="_blank" rel="noopener noreferrer" className="text-swap hover:text-white">
+          <a href={SITE.website} className="text-swap hover:text-white">
             faircodetech.com
           </a>
         </div>
