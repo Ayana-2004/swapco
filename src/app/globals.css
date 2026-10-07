@@ -69,12 +69,20 @@ section[id] {
   background-size: 44px 44px;
 }
 
+/* Corners scale with the phone (14% of width; 6.3% of height is the same
+   length at 9:20) so small mockups don't clip the status bar. The padding is
+   the bezel: it insets the screen so the clock and battery clear the curve. */
 .device-frame {
-  border-radius: 2.5rem;
+  border-radius: 14% / 6.3%;
   border: 7px solid #0d2a4a;
+  padding: 4%;
   box-shadow:
     0 30px 60px -24px rgba(13, 42, 74, 0.45),
     0 12px 24px -12px rgba(13, 42, 74, 0.25);
-  overflow: hidden;
   background: #ffffff;
+}
+
+.device-screen {
+  border-radius: 10% / 4.5%;
+  overflow: hidden;
 }

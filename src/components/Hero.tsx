@@ -2,7 +2,7 @@ import DeviceFrame from "./DeviceFrame";
 
 export default function Hero() {
   return (
-    <section id="top" className="hero-grid relative overflow-hidden pb-24 pt-16 sm:pt-24 lg:pt-10">
+    <section id="top" className="hero-grid relative overflow-hidden pb-16 pt-16 sm:pt-24 lg:pt-10">
       {/* Two offset rings echo the logo's navy and cyan loops. */}
       <div className="pointer-events-none absolute -right-40 top-10 hidden h-[560px] w-[560px] rounded-full border-[40px] border-swap/10 lg:block" />
       <div className="pointer-events-none absolute -right-4 top-64 hidden h-[420px] w-[420px] rounded-full border-[34px] border-navy/[0.05] lg:block" />
@@ -32,7 +32,7 @@ export default function Hero() {
           <div className="mt-9 flex flex-wrap items-center gap-4">
             <a
               href="#download"
-              className="inline-flex items-center gap-3 rounded-full bg-swap px-7 py-4 text-base font-semibold text-navy shadow-lg shadow-swap/25 transition-transform hover:-translate-y-0.5"
+              className="inline-flex w-full items-center justify-center gap-3 rounded-full bg-swap px-7 py-4 sm:w-auto text-base font-semibold text-navy shadow-lg shadow-swap/25 transition-transform hover:-translate-y-0.5"
             >
               Get Started
               <span className="flex h-7 w-7 items-center justify-center rounded-full bg-navy text-white">
@@ -41,11 +41,18 @@ export default function Hero() {
                 </svg>
               </span>
             </a>
+            {/* Same pill, size and icon slot as Get Started, but outlined so the
+                primary CTA keeps the visual weight. ring-inset keeps heights equal. */}
             <a
               href="#how-it-works"
-              className="text-base font-semibold text-navy underline decoration-swap decoration-2 underline-offset-[6px] hover:decoration-navy"
+              className="inline-flex w-full items-center justify-center gap-3 rounded-full bg-white px-7 py-4 sm:w-auto text-base font-semibold text-navy ring-2 ring-inset ring-navy/15 transition-all hover:-translate-y-0.5 hover:ring-navy/40"
             >
               See how it works
+              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-swap/15 text-navy">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 5V19M12 19L6 13M12 19L18 13" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </span>
             </a>
           </div>
 

@@ -65,7 +65,9 @@ export default function Features() {
           </p>
         </div>
 
-        <div className="rounded-3xl bg-slate-light p-8 ring-1 ring-navy/[0.06] md:col-span-2">
+        {/* The grid row matches the taller Office ID card; centring the content
+            stops it leaving a blank band along the bottom of this card. */}
+        <div className="flex flex-col justify-center rounded-3xl bg-slate-light p-8 ring-1 ring-navy/[0.06] md:col-span-2">
           <div className="flex flex-col gap-8 sm:flex-row sm:items-center">
             <div className="flex-1">
               <h3 className="font-display text-xl font-bold text-navy">Two-Way Location Matches</h3>
