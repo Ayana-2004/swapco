@@ -42,17 +42,18 @@ export default function Faq() {
   return (
     <section id="faq" className="mx-auto max-w-4xl px-6 py-24 sm:px-10">
       <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdScript(FAQ_JSON_LD)} />
+      {/* Spelled out as the heading itself: a lone 3-letter "FAQ" label read as
+          too small, and this is the phrase people actually search for. */}
       <div className="text-center">
-        <p className="text-sm font-semibold uppercase tracking-wider text-navy">FAQ</p>
-        <div className="mx-auto mt-3 h-0.5 w-10 rounded-full bg-swap" />
-        <h2 className="font-display mt-4 text-3xl font-bold text-navy sm:text-4xl">Questions, answered.</h2>
+        <div className="mx-auto h-0.5 w-10 rounded-full bg-swap" />
+        <h2 className="font-display mt-4 text-3xl font-bold text-navy sm:text-4xl">Frequently asked questions</h2>
       </div>
 
       <div className="mt-12 space-y-3">
         {FAQS.map((item) => (
           <details
             key={item.q}
-            className="group rounded-2xl bg-slate-light px-6 py-5 ring-1 ring-navy/[0.06] open:bg-white open:shadow-lg open:shadow-navy/5 open:ring-navy/10"
+            className="faq-item group rounded-2xl bg-slate-light px-6 py-5 transition-[background-color,box-shadow] duration-300 ring-1 ring-navy/[0.06] open:bg-white open:shadow-lg open:shadow-navy/5 open:ring-navy/10"
           >
             <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-display text-base font-bold text-navy">
               {item.q}

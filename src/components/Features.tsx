@@ -80,7 +80,7 @@ export default function Features() {
               <div className="flex-1 text-center">
                 <p className="text-xs text-navy/55">You</p>
                 <p className="mt-1 text-sm font-bold text-navy">Malappuram</p>
-                <p className="text-xs text-navy/55">wants Bangalore</p>
+                <p className="text-xs text-navy/55">Wants Bangalore</p>
               </div>
               <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-navy text-swap">
                 <SwapIcon className="h-5 w-5" />
@@ -88,7 +88,7 @@ export default function Features() {
               <div className="flex-1 text-center">
                 <p className="text-xs text-navy/55">Your match</p>
                 <p className="mt-1 text-sm font-bold text-navy">Bangalore</p>
-                <p className="text-xs text-navy/55">wants Malappuram</p>
+                <p className="text-xs text-navy/55">Wants Malappuram</p>
               </div>
             </div>
           </div>

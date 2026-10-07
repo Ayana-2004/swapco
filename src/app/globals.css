@@ -86,3 +86,29 @@ section[id] {
   border-radius: 10% / 4.5%;
   overflow: hidden;
 }
+
+/* FAQ accordion: native <details> opens in one frame, so everything below
+   snapped down. Animate the content's height instead. interpolate-size lets
+   block-size transition to auto; browsers without ::details-content support
+   fall back to the instant open. */
+.faq-item {
+  interpolate-size: allow-keywords;
+}
+
+.faq-item::details-content {
+  block-size: 0;
+  overflow: hidden;
+  transition:
+    block-size 0.3s ease,
+    content-visibility 0.3s allow-discrete;
+}
+
+.faq-item[open]::details-content {
+  block-size: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .faq-item::details-content {
+    transition: none;
+  }
+}

@@ -13,7 +13,7 @@ const SCREENS = [
 
 export default function ScreensShowcase() {
   return (
-    <section id="screens" className="bg-slate-light py-24">
+    <section id="screens" className="bg-slate-light pb-12 pt-24">
       <div className="mx-auto max-w-6xl px-6 sm:px-10">
         <div className="max-w-2xl">
           <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-navy">
@@ -24,20 +24,27 @@ export default function ScreensShowcase() {
             Every screen, designed around trust.
           </h2>
         </div>
+      </div>
 
-        <div className="-mx-6 mt-14 flex snap-x gap-8 overflow-x-auto px-6 pb-4 sm:-mx-10 sm:px-10">
-          {SCREENS.map((screen, i) => (
-            <figure key={screen.src} className="w-[200px] shrink-0 snap-start sm:w-[230px]">
-              <DeviceFrame src={screen.src} alt={screen.alt} />
-              <figcaption className="mt-5 flex items-center justify-center gap-2 text-sm font-semibold text-navy">
-                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-navy text-[11px] text-white">
-                  {i + 1}
-                </span>
-                {screen.label}
-              </figcaption>
-            </figure>
-          ))}
-        </div>
+      {/* Below lg: a swipe strip that runs to the screen edges, so phones exit
+          at the viewport (a scroll cue) instead of being sliced at the content
+          column. Inline padding lines the first phone up with the heading;
+          scroll-padding makes snap respect it; the vertical padding leaves room
+          for the frame shadows that overflow-x would otherwise cut off.
+          From lg: a 4x2 grid, so every screen is whole and mouse users never
+          need to scroll sideways. */}
+      <div className="mt-8 flex snap-x snap-mandatory gap-8 overflow-x-auto px-6 pb-16 pt-6 scroll-px-6 sm:px-[max(2.5rem,calc((100%-72rem)/2+2.5rem))] sm:scroll-px-[max(2.5rem,calc((100%-72rem)/2+2.5rem))] lg:mx-auto lg:grid lg:max-w-6xl lg:grid-cols-4 lg:gap-x-8 lg:gap-y-12 lg:overflow-visible lg:px-10">
+        {SCREENS.map((screen, i) => (
+          <figure key={screen.src} className="w-[200px] shrink-0 snap-start sm:w-[230px] lg:w-auto">
+            <DeviceFrame src={screen.src} alt={screen.alt} />
+            <figcaption className="mt-5 flex items-center justify-center gap-2 text-sm font-semibold text-navy">
+              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-navy text-[11px] text-white">
+                {i + 1}
+              </span>
+              {screen.label}
+            </figcaption>
+          </figure>
+        ))}
       </div>
     </section>
   );
