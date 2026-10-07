@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import HomeLink from "./HomeLink";
 import Logo from "./Logo";
 
 const FAIRCODE_URL = "https://www.faircodetech.com";
@@ -8,7 +9,9 @@ export default function Footer() {
   return (
     <footer className="border-t border-navy/10 bg-white py-12">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-8 px-6 sm:flex-row sm:px-10">
-        <Logo variant="stacked" />
+        <HomeLink>
+          <Logo variant="stacked" />
+        </HomeLink>
         <p className="text-sm text-navy/55">&copy; {new Date().getFullYear()} SwapaPost. All rights reserved.</p>
         <div className="flex gap-6 text-sm font-medium text-navy/65">
           <Link href="/privacy" className="hover:text-navy">Privacy</Link>

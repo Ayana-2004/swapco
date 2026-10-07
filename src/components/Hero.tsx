@@ -2,7 +2,7 @@ import DeviceFrame from "./DeviceFrame";
 
 export default function Hero() {
   return (
-    <section id="top" className="hero-grid relative overflow-hidden pb-24 pt-16 sm:pt-24">
+    <section id="top" className="hero-grid relative overflow-hidden pb-24 pt-16 sm:pt-24 lg:pt-10">
       {/* Two offset rings echo the logo's navy and cyan loops. */}
       <div className="pointer-events-none absolute -right-40 top-10 hidden h-[560px] w-[560px] rounded-full border-[40px] border-swap/10 lg:block" />
       <div className="pointer-events-none absolute -right-4 top-64 hidden h-[420px] w-[420px] rounded-full border-[34px] border-navy/[0.05] lg:block" />
@@ -69,18 +69,27 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="relative mx-auto flex h-[540px] w-full max-w-md items-center justify-center lg:h-[640px]">
+        {/* On desktop the stage height tracks the viewport (minus navbar and
+            padding) so the phones are fully visible on first load; the 7:10
+            aspect keeps the phone stack in proportion as it scales. */}
+        <div className="relative mx-auto flex h-[540px] w-full max-w-md items-center justify-center lg:aspect-[7/10] lg:h-[clamp(460px,calc(100svh-8rem),640px)] lg:w-auto">
           <div className="absolute left-1/2 top-1/2 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-swap/15 blur-3xl" />
 
-          <div className="absolute left-0 top-12 w-[44%] -rotate-6">
+          <div className="absolute left-0 top-12 w-[44%] lg:top-[7.5%] -rotate-6">
             <DeviceFrame src="/screens/recommendations.jpg" alt="SwapaPost recommendations feed" />
           </div>
-          <div className="absolute right-0 top-20 w-[44%] rotate-6">
+          <div className="absolute right-0 top-20 w-[44%] lg:top-[12.5%] rotate-6">
             <DeviceFrame src="/screens/profile-verified.jpg" alt="SwapaPost profile with verified office ID" />
           </div>
-          <div className="relative z-10 w-[56%]">
+          {/* The screenshot shows the app's own "Get Started" button, which
+              visitors try to click, so the phone goes where the real CTA does. */}
+          <a
+            href="#download"
+            aria-label="Get Started with SwapaPost"
+            className="relative z-10 block w-[56%] transition-transform hover:-translate-y-1"
+          >
             <DeviceFrame src="/screens/get-started.jpg" alt="SwapaPost get started screen" priority />
-          </div>
+          </a>
         </div>
       </div>
     </section>
