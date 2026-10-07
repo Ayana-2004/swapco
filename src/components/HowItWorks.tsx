@@ -59,7 +59,7 @@ export default function HowItWorks() {
                 {step.n}
               </span>
               <h3 className="font-display mt-6 text-lg font-bold">{step.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-white/65">{step.body}</p>
+              <p className="mt-2 text-balance text-sm leading-relaxed text-white/65">{step.body}</p>
             </li>
           ))}
           </ol>

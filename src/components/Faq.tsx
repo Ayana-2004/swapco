@@ -51,11 +51,13 @@ export default function Faq() {
 
       <div className="mt-12 space-y-3">
         {FAQS.map((item) => (
+          // Keyboard focus is drawn around the whole card: the browser's default
+          // outline hugged the summary and cut through the text and icon.
           <details
             key={item.q}
-            className="faq-item group rounded-2xl bg-slate-light px-6 py-5 transition-[background-color,box-shadow] duration-300 ring-1 ring-navy/[0.06] open:bg-white open:shadow-lg open:shadow-navy/5 open:ring-navy/10"
+            className="faq-item group rounded-2xl bg-slate-light px-6 py-5 transition-[background-color,box-shadow] duration-300 has-[summary:focus-visible]:outline-2 has-[summary:focus-visible]:outline-offset-2 has-[summary:focus-visible]:outline-swap ring-1 ring-navy/[0.06] open:bg-white open:shadow-lg open:shadow-navy/5 open:ring-navy/10"
           >
-            <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-display text-base font-bold text-navy">
+            <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-display text-base font-bold text-navy outline-none">
               {item.q}
               <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-navy text-white transition-transform group-open:rotate-45 group-open:bg-swap group-open:text-navy">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none">

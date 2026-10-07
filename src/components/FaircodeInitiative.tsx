@@ -14,7 +14,7 @@ export default function FaircodeInitiative() {
         <h2 className="font-geist mt-6 text-2xl font-bold leading-tight text-white sm:text-3xl">
           Serious software, that feels light.
         </h2>
-        <p className="mx-auto mt-4 max-w-xl text-white/65">
+        <p className="mx-auto mt-4 max-w-xl text-balance text-white/65">
           SwapaPost is built and maintained by Faircode, the studio behind
           enterprise software for growing teams. Same discipline, clarity,
           trust, and craft, aimed at a different problem: getting people

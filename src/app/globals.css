@@ -34,6 +34,24 @@ section[id] {
   scroll-margin-top: 72px;
 }
 
+/* No one-word last lines: headings balance their lines, body copy uses
+   pretty wrapping (avoids orphans). In @layer base so text-* utilities can
+   still override; browsers without support fall back to normal wrapping. */
+@layer base {
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p,
+  li,
+  figcaption,
+  dd {
+    text-wrap: pretty;
+  }
+}
+
 .font-display {
   font-family: var(--font-display);
 }
