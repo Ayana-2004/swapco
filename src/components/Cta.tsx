@@ -1,4 +1,5 @@
 import DeviceFrame from "./DeviceFrame";
+import HomeLink from "./HomeLink";
 
 export default function Cta() {
   return (
@@ -8,9 +9,9 @@ export default function Cta() {
         <div className="relative grid items-center gap-12 lg:grid-cols-2">
           <div>
             <h2 className="font-display text-3xl font-bold text-white sm:text-4xl">
-              Swap your post.
+              Swap your post
               <br />
-              <span className="text-swap">Not your standards.</span>
+              <span className="text-swap">Not your standards</span>
             </h2>
             <p className="mt-4 max-w-md text-white/70">
               Join the early access list and be first to find your swap
@@ -43,10 +44,11 @@ export default function Cta() {
           </div>
 
           {/* Whole phone on every screen: it used to bleed off the card bottom on
-              mobile, which testers read as a broken image. */}
-          <div className="relative mx-auto w-[62%] max-w-[240px] justify-self-center lg:justify-self-end">
+              mobile, which testers read as a broken image. The splash is just
+              the SwapaPost logo, so it links home like every other logo. */}
+          <HomeLink className="relative mx-auto block w-[62%] max-w-[240px] justify-self-center transition-transform hover:-translate-y-1 lg:justify-self-end">
             <DeviceFrame src="/screens/splash.jpg" alt="SwapaPost app splash screen" className="!border-white/90" />
-          </div>
+          </HomeLink>
         </div>
       </div>
     </section>

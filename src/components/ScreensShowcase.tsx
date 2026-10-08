@@ -21,7 +21,7 @@ export default function ScreensShowcase() {
             Inside the app
           </p>
           <h2 className="font-display mt-4 text-3xl font-bold text-navy sm:text-4xl">
-            Every screen, designed around trust.
+            Every screen designed around trust
           </h2>
         </div>
       </div>

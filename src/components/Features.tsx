@@ -9,14 +9,14 @@ const CHIPS = [
 
 export default function Features() {
   return (
-    <section id="features" className="mx-auto max-w-6xl px-6 py-24 sm:px-10">
+    <section id="features" className="mx-auto max-w-6xl px-6 pb-24 pt-16 sm:px-10">
       <div className="max-w-2xl">
         <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-navy">
           <span className="h-0.5 w-6 rounded-full bg-swap" />
           Why SwapaPost
         </p>
         <h2 className="font-display mt-4 text-3xl font-bold text-navy sm:text-4xl">
-          Built to match real swaps, not endless scrolling.
+          Built to match real swaps instead of endless scrolling
         </h2>
         <p className="mt-4 text-lg text-navy/65">
           SwapaPost finds the colleague at another branch who wants your

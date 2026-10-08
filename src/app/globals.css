@@ -2,9 +2,11 @@
 
 @theme inline {
   /* SwapaPost typography (SwapaPost_Official_Brandbook.pdf, section 03):
-     headings Helvetica Neue / Inter, body Inter. */
+     headings Helvetica Neue / Inter, body Inter. Headings use the bundled
+     Inter, not Helvetica Neue: only Apple devices have Helvetica Neue, so
+     headlines looked different on iOS than on Android and Windows. */
   --font-sans: var(--font-body);
-  --font-display: "Helvetica Neue", Helvetica, var(--font-body), Arial, sans-serif;
+  --font-display: var(--font-body), Arial, sans-serif;
 
   /* SwapaPost core palette (SwapaPost_Official_Brandbook.pdf, section 02). */
   --color-navy: #0d2a4a;

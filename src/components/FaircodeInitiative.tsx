@@ -12,7 +12,7 @@ export default function FaircodeInitiative() {
         <div className="fc-current-bg mx-auto mt-4 h-[3px] w-14 rounded-full" />
 
         <h2 className="font-geist mt-6 text-2xl font-bold leading-tight text-white sm:text-3xl">
-          Serious software, that feels light.
+          Serious software that feels light
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-balance text-white/65">
           SwapaPost is built and maintained by Faircode, the studio behind

@@ -46,7 +46,7 @@ export default function HowItWorks() {
             How it works
           </p>
           <h2 className="font-display mt-4 text-3xl font-bold sm:text-4xl">
-            From sign up to your first swap request, in four steps.
+            From sign up to your first swap request in four steps
           </h2>
         </div>
 

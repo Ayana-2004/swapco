@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Inter, Geist } from "next/font/google";
 import { SITE } from "@/lib/site";
+import HashLinkScroller from "@/components/HashLinkScroller";
 import "./globals.css";
 
-// SwapaPost body and UI font, and the fallback for Helvetica Neue headings.
+// SwapaPost font for headings, body and UI, bundled so every platform matches.
 const inter = Inter({
   variable: "--font-body",
   subsets: ["latin"],
@@ -60,6 +61,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-white font-sans text-navy antialiased">
         {children}
+        <HashLinkScroller />
       </body>
     </html>
   );

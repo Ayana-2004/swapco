@@ -40,7 +40,9 @@ const FAQ_JSON_LD = {
 
 export default function Faq() {
   return (
-    <section id="faq" className="mx-auto max-w-4xl px-6 py-24 sm:px-10">
+    // w-full: in main's flex column, mx-auto alone shrink-wraps the section to
+    // its text, so opening an answer widened and re-centred the whole list.
+    <section id="faq" className="mx-auto w-full max-w-4xl px-6 py-24 sm:px-10">
       <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdScript(FAQ_JSON_LD)} />
       {/* Spelled out as the heading itself: a lone 3-letter "FAQ" label read as
           too small, and this is the phrase people actually search for. */}

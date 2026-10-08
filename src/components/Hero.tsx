@@ -2,7 +2,7 @@ import DeviceFrame from "./DeviceFrame";
 
 export default function Hero() {
   return (
-    <section id="top" className="hero-grid relative overflow-hidden pb-16 pt-16 sm:pt-24 lg:pt-10">
+    <section id="top" className="hero-grid relative overflow-hidden pb-6 pt-16 sm:pt-24 lg:pt-10">
       {/* Two offset rings echo the logo's navy and cyan loops. */}
       <div className="pointer-events-none absolute -right-40 top-10 hidden h-[560px] w-[560px] rounded-full border-[40px] border-swap/10 lg:block" />
       <div className="pointer-events-none absolute -right-4 top-64 hidden h-[420px] w-[420px] rounded-full border-[34px] border-navy/[0.05] lg:block" />
@@ -15,10 +15,10 @@ export default function Hero() {
           </div>
 
           <h1 className="font-display text-4xl font-bold leading-[1.08] text-navy sm:text-5xl lg:text-[3.5rem]">
-            Your location,
+            Your location
             <br />
             <span className="relative inline-block">
-              your choice.
+              your choice
               <span className="absolute -bottom-1 left-0 h-2 w-full rounded-full bg-swap/70" />
             </span>
           </h1>
@@ -78,25 +78,23 @@ export default function Hero() {
 
         {/* On desktop the stage height tracks the viewport (minus navbar and
             padding) so the phones are fully visible on first load; the 7:10
-            aspect keeps the phone stack in proportion as it scales. */}
-        <div className="relative mx-auto flex h-[540px] w-full max-w-md items-center justify-center lg:aspect-[7/10] lg:h-[clamp(460px,calc(100svh-8rem),640px)] lg:w-auto">
+            aspect keeps the phone stack in proportion as it scales. On mobile
+            the front phone sets the height, so no fixed height leaves a blank
+            band under the stack. */}
+        <div className="relative mx-auto flex w-full max-w-md items-center justify-center py-8 lg:py-0 lg:aspect-[7/10] lg:h-[clamp(460px,calc(100svh-8rem),640px)] lg:w-auto">
           <div className="absolute left-1/2 top-1/2 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-swap/15 blur-3xl" />
 
           <div className="absolute left-0 top-12 w-[44%] lg:top-[7.5%] -rotate-6">
-            <DeviceFrame src="/screens/recommendations.jpg" alt="SwapaPost recommendations feed" />
+            <DeviceFrame src="/screens/notifications-received.jpg" alt="SwapaPost received swap request" />
           </div>
           <div className="absolute right-0 top-20 w-[44%] lg:top-[12.5%] rotate-6">
             <DeviceFrame src="/screens/profile-verified.jpg" alt="SwapaPost profile with verified office ID" />
           </div>
-          {/* The screenshot shows the app's own "Get Started" button, which
-              visitors try to click, so the phone goes where the real CTA does. */}
-          <a
-            href="#download"
-            aria-label="Get Started with SwapaPost"
-            className="relative z-10 block w-[56%] transition-transform hover:-translate-y-1"
-          >
-            <DeviceFrame src="/screens/get-started.jpg" alt="SwapaPost get started screen" priority />
-          </a>
+          {/* The front phone must not show a CTA-like button: the app's own
+              "Get Started" screen here read as a second, fake hero CTA. */}
+          <div className="relative z-10 w-[56%]">
+            <DeviceFrame src="/screens/recommendations.jpg" alt="SwapaPost recommendations feed" priority />
+          </div>
         </div>
       </div>
     </section>
