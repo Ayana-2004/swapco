@@ -7,7 +7,7 @@ export default function Hero() {
       <div className="pointer-events-none absolute -right-40 top-10 hidden h-[560px] w-[560px] rounded-full border-[40px] border-swap/10 lg:block" />
       <div className="pointer-events-none absolute -right-4 top-64 hidden h-[420px] w-[420px] rounded-full border-[34px] border-navy/[0.05] lg:block" />
 
-      <div className="relative mx-auto grid max-w-6xl items-center gap-16 px-6 sm:px-10 lg:grid-cols-2">
+      <div className="relative mx-auto grid max-w-7xl items-center gap-16 px-6 sm:px-10 lg:grid-cols-2">
         <div className="max-w-xl">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-white px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-navy ring-1 ring-navy/10">
             <span className="h-2 w-2 rounded-full bg-swap" />

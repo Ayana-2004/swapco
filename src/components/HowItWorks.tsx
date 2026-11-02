@@ -39,7 +39,7 @@ export default function HowItWorks() {
   return (
     <section id="how-it-works" className="navy-grid py-24 text-white">
       <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdScript(HOW_TO_JSON_LD)} />
-      <div className="mx-auto max-w-6xl px-6 sm:px-10">
+      <div className="mx-auto max-w-7xl px-6 sm:px-10">
         <div className="max-w-2xl">
           <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-swap">
             <span className="h-0.5 w-6 rounded-full bg-swap" />

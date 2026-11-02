@@ -7,18 +7,28 @@ const CHIPS = [
   { label: "Company", tone: "bg-white text-navy ring-1 ring-navy/15" },
 ];
 
+const FILTER_FIELDS = [
+  { label: "Location", value: "Ernakulam", filled: true },
+  { label: "Company name", value: "Federal Bank", filled: true },
+  { label: "Specialization", value: "React Native", filled: false },
+];
+
 export default function Features() {
   return (
-    <section id="features" className="mx-auto max-w-6xl px-6 pb-24 pt-16 sm:px-10">
-      <div className="max-w-2xl">
-        <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-navy">
-          <span className="h-0.5 w-6 rounded-full bg-swap" />
-          Why SwapaPost
-        </p>
-        <h2 className="font-display mt-4 text-3xl font-bold text-navy sm:text-4xl">
-          Built to match real swaps instead of endless scrolling
-        </h2>
-        <p className="mt-4 text-lg text-navy/65">
+    <section id="features" className="mx-auto max-w-7xl px-6 pb-24 pt-16 sm:px-10">
+      {/* Heading left, intro right on desktop: stacked, the right half of the
+          section sat empty beside the heading (Bug_006). */}
+      <div className="max-w-2xl lg:grid lg:max-w-none lg:grid-cols-2 lg:items-end lg:gap-16">
+        <div>
+          <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-navy">
+            <span className="h-0.5 w-6 rounded-full bg-swap" />
+            Why SwapaPost
+          </p>
+          <h2 className="font-display mt-4 text-3xl font-bold text-navy sm:text-4xl">
+            Built to match real swaps instead of endless scrolling
+          </h2>
+        </div>
+        <p className="mt-4 text-lg text-navy/65 lg:mt-0">
           SwapaPost finds the colleague at another branch who wants your
           city while you want theirs, then lets you send a swap request to
           make it happen.
@@ -26,22 +36,38 @@ export default function Features() {
       </div>
 
       <div className="mt-14 grid gap-6 md:grid-cols-3">
-        <div className="rounded-3xl bg-slate-light p-6 ring-1 ring-navy/[0.06] sm:p-8 md:col-span-3">
-          <h3 className="font-display text-xl font-bold text-navy">Advanced Job Filter</h3>
-          <p className="mt-2 max-w-lg text-navy/65">
-            Search by location, company, job title and specialization to
-            find colleagues at the branch you want to move to.
-          </p>
-          {/* Smaller chips and card padding on phones keep all three on one
-              row down to 360px wide (every current iPhone and most Androids). */}
-          <div className="mt-6 flex flex-wrap gap-2 sm:mt-8 sm:gap-3">
-            {CHIPS.map((chip) => (
-              <span
-                key={chip.label}
-                className={`${chip.tone} whitespace-nowrap rounded-full px-3 py-1.5 text-[13px] font-semibold sm:px-4 sm:py-2 sm:text-sm`}
-              >
-                {chip.label}
-              </span>
+        {/* A preview of the app's filter sheet fills the right half of this
+            full-width card, which was empty beside the text (Bug_006). */}
+        <div className="rounded-3xl bg-slate-light p-6 ring-1 ring-navy/[0.06] sm:p-8 md:col-span-3 md:grid md:grid-cols-2 md:items-center md:gap-10">
+          <div>
+            <h3 className="font-display text-xl font-bold text-navy">Advanced Job Filter</h3>
+            <p className="mt-2 max-w-lg text-navy/65">
+              Search by location, company, job title and specialization to
+              find colleagues at the branch you want to move to.
+            </p>
+            {/* Smaller chips and card padding on phones keep all three on one
+                row down to 360px wide (every current iPhone and most Androids). */}
+            <div className="mt-6 flex flex-wrap gap-2 sm:mt-8 sm:gap-3">
+              {CHIPS.map((chip) => (
+                <span
+                  key={chip.label}
+                  className={`${chip.tone} whitespace-nowrap rounded-full px-3 py-1.5 text-[13px] font-semibold sm:px-4 sm:py-2 sm:text-sm`}
+                >
+                  {chip.label}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Fields and sample values match the app's own filter screen. */}
+          <div className="mt-8 hidden rounded-2xl bg-white p-5 ring-1 ring-navy/10 md:mt-0 md:block" aria-hidden="true">
+            {FILTER_FIELDS.map((field) => (
+              <div key={field.label} className="mb-3 last:mb-0">
+                <p className="text-xs font-medium text-navy/55">{field.label}</p>
+                <p className={`mt-1 rounded-xl bg-slate-light px-4 py-2.5 text-sm ${field.filled ? "font-semibold text-navy" : "text-navy/40"}`}>
+                  {field.value}
+                </p>
+              </div>
             ))}
           </div>
         </div>

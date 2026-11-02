@@ -8,7 +8,7 @@ const FAIRCODE_URL = "https://www.faircodetech.com";
 export default function Footer() {
   return (
     <footer className="border-t border-navy/10 bg-white py-12">
-      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-8 px-6 sm:flex-row sm:px-10">
+      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 px-6 sm:flex-row sm:px-10">
         <HomeLink>
           <Logo variant="stacked" />
         </HomeLink>
@@ -20,7 +20,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="mx-auto mt-10 flex max-w-6xl items-center justify-center border-t border-navy/10 px-6 pt-6 sm:px-10">
+      <div className="mx-auto mt-10 flex max-w-7xl items-center justify-center border-t border-navy/10 px-6 pt-6 sm:px-10">
         {/* Only the Faircode badge is the link; "A product of" is plain text. */}
         <p className="flex items-center gap-3 text-sm text-navy/55">
           <span>A product of</span>

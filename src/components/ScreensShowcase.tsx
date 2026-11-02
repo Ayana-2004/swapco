@@ -14,7 +14,7 @@ const SCREENS = [
 export default function ScreensShowcase() {
   return (
     <section id="screens" className="bg-slate-light pb-12 pt-24">
-      <div className="mx-auto max-w-6xl px-6 sm:px-10">
+      <div className="mx-auto max-w-7xl px-6 sm:px-10">
         <div className="max-w-2xl">
           <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-navy">
             <span className="h-0.5 w-6 rounded-full bg-swap" />
@@ -33,7 +33,7 @@ export default function ScreensShowcase() {
           for the frame shadows that overflow-x would otherwise cut off.
           From lg: a 4x2 grid, so every screen is whole and mouse users never
           need to scroll sideways. */}
-      <div className="mt-8 flex snap-x snap-mandatory gap-8 overflow-x-auto px-6 pb-16 pt-6 scroll-px-6 sm:px-[max(2.5rem,calc((100%-72rem)/2+2.5rem))] sm:scroll-px-[max(2.5rem,calc((100%-72rem)/2+2.5rem))] lg:mx-auto lg:grid lg:max-w-6xl lg:grid-cols-4 lg:gap-x-8 lg:gap-y-12 lg:overflow-visible lg:px-10">
+      <div className="mt-8 flex snap-x snap-mandatory gap-8 overflow-x-auto px-6 pb-16 pt-6 scroll-px-6 sm:px-[max(2.5rem,calc((100%-80rem)/2+2.5rem))] sm:scroll-px-[max(2.5rem,calc((100%-80rem)/2+2.5rem))] lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-4 lg:gap-x-8 lg:gap-y-12 lg:overflow-visible lg:px-10">
         {SCREENS.map((screen, i) => (
           <figure key={screen.src} className="w-[200px] shrink-0 snap-start sm:w-[230px] lg:w-auto">
             <DeviceFrame src={screen.src} alt={screen.alt} />
