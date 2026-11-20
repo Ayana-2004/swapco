@@ -40,10 +40,13 @@ export default function HowItWorks() {
     <section id="how-it-works" className="navy-grid py-24 text-white">
       <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdScript(HOW_TO_JSON_LD)} />
       <div className="mx-auto max-w-7xl px-6 sm:px-10">
-        <div className="max-w-2xl">
-          <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-swap">
+        {/* Centred heading and steps: left-aligned, the heading left the right
+            half empty and the section read as unfinished (Bug_029). */}
+        <div className="mx-auto max-w-2xl text-center">
+          <p className="flex items-center justify-center gap-2 text-sm font-semibold uppercase tracking-wider text-swap">
             <span className="h-0.5 w-6 rounded-full bg-swap" />
             How it works
+            <span className="h-0.5 w-6 rounded-full bg-swap" />
           </p>
           <h2 className="font-display mt-4 text-3xl font-bold sm:text-4xl">
             From sign up to your first swap request in four steps
@@ -51,15 +54,17 @@ export default function HowItWorks() {
         </div>
 
         <div className="relative mt-14">
-          <span className="absolute left-0 right-0 top-6 hidden h-px bg-linear-to-r from-swap/60 via-swap/30 to-transparent lg:block" />
-          <ol className="relative grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {/* Runs from the first step's circle to the last: 12.5% is the centre
+              of the first and last of four equal columns. */}
+          <span className="absolute left-[12.5%] right-[12.5%] top-6 hidden h-px bg-swap/40 lg:block" />
+          <ol className="relative grid gap-10 text-center sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
           {STEPS.map((step) => (
-            <li key={step.n} className="relative">
+            <li key={step.n} className="relative flex flex-col items-center">
               <span className="relative flex h-12 w-12 items-center justify-center rounded-full bg-swap font-display text-sm font-bold text-navy ring-8 ring-navy">
                 {step.n}
               </span>
               <h3 className="font-display mt-6 text-lg font-bold">{step.title}</h3>
-              <p className="mt-2 text-balance text-sm leading-relaxed text-white/65">{step.body}</p>
+              <p className="mt-2 max-w-64 text-balance text-sm leading-relaxed text-white/65">{step.body}</p>
             </li>
           ))}
           </ol>

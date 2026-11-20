@@ -58,8 +58,11 @@ export default function Navbar() {
         </div>
       </nav>
 
+      {/* Overlays the page instead of pushing it down: in the flow, closing it
+          on a link tap shifted every section up by its height, so the scroll
+          landed mid-section (Bug_030). */}
       {open && (
-        <div className="border-t border-navy/10 bg-white px-6 pb-5 pt-3 sm:px-10 md:hidden">
+        <div className="absolute inset-x-0 top-full border-t border-navy/10 bg-white px-6 pb-5 pt-3 shadow-lg shadow-navy/10 sm:px-10 md:hidden">
           <div className="flex flex-col gap-1">
             {LINKS.map((link) => (
               <Link

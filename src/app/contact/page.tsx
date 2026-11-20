@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import EmailActions from "@/components/EmailActions";
 import LegalPage from "@/components/LegalPage";
 import { SITE } from "@/lib/site";
 import { pageMetadata } from "@/lib/seo";
@@ -41,12 +42,7 @@ export default function ContactPage() {
             </span>
             <h2 className="font-display mt-6 text-xl font-bold text-navy">{c.title}</h2>
             <p className="mt-2 flex-1 text-navy/65">{c.body}</p>
-            <a
-              href={`mailto:${c.email}`}
-              className="mt-6 inline-flex w-fit items-center rounded-full bg-navy px-5 py-2.5 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
-            >
-              {c.email}
-            </a>
+            <EmailActions email={c.email} />
           </div>
         ))}
       </div>

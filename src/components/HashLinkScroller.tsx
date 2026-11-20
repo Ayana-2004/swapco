@@ -22,7 +22,9 @@ export default function HashLinkScroller() {
 
       e.preventDefault();
       history.pushState(null, "", url.hash);
-      scrollToElement(target);
+      // Measure on the next frame, after the click's own handlers (such as
+      // the mobile menu closing) have updated the layout.
+      requestAnimationFrame(() => scrollToElement(target));
     }
 
     document.addEventListener("click", onClick, true);

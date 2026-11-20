@@ -17,9 +17,11 @@ export default function Hero() {
           <h1 className="font-display text-4xl font-bold leading-[1.08] text-navy sm:text-5xl lg:text-[3.5rem]">
             Your location
             <br />
-            <span className="relative inline-block">
+            {/* The bar sits below the descenders (the "y" tail) and behind the
+                text, so it never crosses the letters (Bug_027). */}
+            <span className="relative z-0 inline-block pb-3 sm:pb-4">
               your choice
-              <span className="absolute -bottom-1 left-0 h-2 w-full rounded-full bg-swap/70" />
+              <span className="absolute bottom-0 left-0 -z-10 h-2 w-full rounded-full bg-swap/70" />
             </span>
           </h1>
 
