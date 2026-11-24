@@ -4,7 +4,7 @@ const STEPS = [
   {
     n: "01",
     title: "Sign up & verify",
-    body: "Create your account, then verify it with a one-time code.",
+    body: "Create your account, then verify it with the code we text to your phone.",
   },
   {
     n: "02",

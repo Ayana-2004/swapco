@@ -97,8 +97,10 @@ export default function Features() {
         </div>
 
         {/* The grid row matches the taller Office ID card; centring the content
-            stops it leaving a blank band along the bottom of this card. */}
-        <div className="flex flex-col justify-center rounded-3xl bg-slate-light p-8 ring-1 ring-navy/[0.06] md:col-span-2">
+            stops it leaving a blank band along the bottom of this card.
+            Tighter padding on phones: at p-8 the city swap box needed 325px
+            and widened the whole page on 360px Android phones. */}
+        <div className="flex flex-col justify-center rounded-3xl bg-slate-light p-6 ring-1 ring-navy/[0.06] sm:p-8 md:col-span-2">
           <div className="flex flex-col gap-8 sm:flex-row sm:items-center">
             <div className="flex-1">
               <h3 className="font-display text-xl font-bold text-navy">Two-Way Location Matches</h3>
@@ -109,7 +111,7 @@ export default function Features() {
                 city you work in.
               </p>
             </div>
-            <div className="flex flex-1 items-center gap-3 rounded-2xl bg-white p-5 ring-1 ring-navy/10">
+            <div className="flex flex-1 items-center gap-2 rounded-2xl bg-white p-4 ring-1 ring-navy/10 sm:gap-3 sm:p-5">
               <div className="flex-1 text-center">
                 <p className="text-xs text-navy/55">You</p>
                 <p className="mt-1 text-sm font-bold text-navy">Malappuram</p>
