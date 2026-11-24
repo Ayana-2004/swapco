@@ -80,7 +80,7 @@ export default function Features() {
               </span>
               <h3 className="font-display mt-6 text-xl font-bold text-navy">Office ID Verification</h3>
             </div>
-            <div className="relative h-32 w-[58px] shrink-0 overflow-hidden rounded-xl shadow-lg ring-2 ring-navy">
+            <div className="relative h-32 w-[58px] shrink-0 overflow-hidden rounded-xl ring-2 ring-navy">
               <Image
                 src="/screens/office-id-scan.jpg"
                 alt="SwapaPost office ID scan screen"
