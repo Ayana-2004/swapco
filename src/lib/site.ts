@@ -3,7 +3,7 @@
 export const SITE = {
   name: "SwapaPost",
   // Production address. Change here when a custom domain is set up.
-  url: "https://swapco.vercel.app",
+  url: "https://swapapost.vercel.app",
   tagline: "Your Location, Your Choice",
   // Search-facing home title: what people actually type, not the slogan.
   seoTitle: "SwapaPost - Swap Your Work Location With a Colleague",

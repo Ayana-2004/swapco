@@ -27,10 +27,10 @@ You keep your job, your role and your company. Only your work location changes.
 
 ## Pages
 
-- [Home](https://swapco.vercel.app/): features, how it works, app screens and FAQ
-- [Privacy Policy](https://swapco.vercel.app/privacy): what data SwapaPost collects and who can see it
-- [Terms of Service](https://swapco.vercel.app/terms): rules for using SwapaPost
-- [Contact](https://swapco.vercel.app/contact): support and privacy contacts
+- [Home](https://swapapost.vercel.app/): features, how it works, app screens and FAQ
+- [Privacy Policy](https://swapapost.vercel.app/privacy): what data SwapaPost collects and who can see it
+- [Terms of Service](https://swapapost.vercel.app/terms): rules for using SwapaPost
+- [Contact](https://swapapost.vercel.app/contact): support and privacy contacts
 
 ## Contact
 
