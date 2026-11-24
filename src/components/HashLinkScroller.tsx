@@ -37,9 +37,12 @@ export default function HashLinkScroller() {
   useEffect(() => {
     let idleId = 0;
     let timerId = 0;
+    // Also decode them now: decoding a large image on first paint is what
+    // froze the scroll mid-trip.
     function preload() {
-      document.querySelectorAll<HTMLImageElement>('img[loading="lazy"]').forEach((img) => {
-        img.loading = "eager";
+      document.querySelectorAll<HTMLImageElement>("main img, footer img").forEach((img) => {
+        if (img.loading === "lazy") img.loading = "eager";
+        img.decode().catch(() => {});
       });
     }
     function schedule() {
